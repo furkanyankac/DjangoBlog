@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container text-center">
+<p ><h1>Anasayfa</h1></p>
+<p>
+        {% if request.user.is_authenticated  %}
+                Giriş Yapılmış, {{ request.user.username }}
+        {% else %}
+                Giriş Yapılmamış
+        {% endif %}
+</p>
+<img src="../media/beşiktaş.jpg" alt="">
+</div>
+
+{% endblock body %}
+
+
